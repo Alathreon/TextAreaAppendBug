@@ -31,7 +31,7 @@ public class App extends Application {
     public static void redirectIO(InputStream src, TextArea ta){
 
         // NPE found in this thread
-        new Thread(() -> {
+        //new Thread(() -> {
             Scanner scanner = new Scanner(src);
             StringBuilder sb = new StringBuilder();
             while (scanner.hasNextLine()) {
@@ -41,7 +41,13 @@ public class App extends Application {
                     sb = new StringBuilder();
                 }
             }
-        }).start();
+        //}).start();
+
+    }
+
+    public static void main(String[] args){
+
+        launch(args);
 
     }
 
